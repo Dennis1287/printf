@@ -1,6 +1,3 @@
-#ifndef MAIN_H
-#define MAIN_H
-
 /**
  * _printf - Custom printf function.
  *
@@ -15,6 +12,6 @@
  * printf function. It supports various format specifiers and allows
  * formatting and printing of output to the standard output.
  */
-int _printf(const char *format, ...);
-
-#endif /* MAIN_H */
+int _printf(const char *format, ...)
+{
+}

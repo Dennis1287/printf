@@ -13,5 +13,5 @@
 ## gcc options
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c
 ```
