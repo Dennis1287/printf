@@ -1,0 +1,47 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * main - Test the custom _printf function as it grows.
+ *
+ * Return: Always 0.
+ *
+ * Description - Used to test the custom _printf function
+ * as we add more functionalities
+ */
+int main(void)
+{
+	int printf_return, _printf_return;
+
+	/* Test 's' specifier */
+	printf("Expected output: Test 's': Hello, World!\n");
+	printf("Actual output ...\n");
+	printf_return = printf("printf Test 's': %s\n", "Hello, World!");
+	_printf_return = _printf("_printf Test 's': %s\n", "Hello, World!");
+
+	printf("Return value test ...\n");
+	printf("(printf) printf Return value: %d\n", printf_return);
+	printf("(_printf) Return value: %d\n\n", _printf_return);
+
+	/* Test 'c' specifier */
+	printf("Expected output: Test 'c': A\n");
+	printf("Actual output ...\n");
+	printf_return = printf("printf Test 'c': %c\n", 'A');
+	_printf_return = _printf("_printf Test 'c': %c\n", 'A');
+
+	printf("Return value test ...\n");
+	printf("(printf) printf Return value: %d\n", printf_return);
+	printf("(_printf) Return value: %d\n\n", _printf_return);
+
+	/* Test '%%' specifier */
+	printf("Expected output: Test '%%': %%\n");
+	printf("Actual output ...\n");
+	printf_return = printf("printf Test '%%': %%\n");
+	_printf_return = _printf("_printf Test '%%': %%\n");
+
+	printf("Return value test ...\n");
+	printf("(printf) printf Return value: %d\n", printf_return);
+	printf("(_printf) Return value: %d\n\n", _printf_return);
+
+	return (0);
+}

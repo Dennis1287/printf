@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 {
 	unsigned int i;
 	unsigned int charBytes = 0;
-
 	va_list args;
 
 	va_start(args, format);
