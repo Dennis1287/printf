@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * print_percent - Print the '%' character
- * @args: Variable arguments list
+ * print_percent - Print the '%' character.
  *
- * Return: Always 1 (number of characters printed for '%')
+ * Return: Always 1 (number of characters printed for '%').
  */
 int print_percent(void)
 {

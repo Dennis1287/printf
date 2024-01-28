@@ -16,7 +16,6 @@ int _printf(const char *format, ...)
 {
 	unsigned int i;
 	unsigned int charBytes = 0;
-
 	va_list args;
 
 	va_start(args, format);
@@ -38,6 +37,9 @@ int _printf(const char *format, ...)
 				break;
 			case 's':
 				charBytes += print_str(args);
+				break;
+			case '%':
+				charBytes += print_percent();
 				break;
 			default:
 				_putchar('%');

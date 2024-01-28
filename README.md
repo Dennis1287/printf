@@ -36,11 +36,23 @@ Example:
 
 int main(void)
 {
-    _printf("Hello, %s!\n", "World");
-    _printf("The answer is: %d\n", 42);
+    char *str = "Hello, World!";
+    char ch = 'A';
+
+    _printf("Example Usage:\n");
+
+    /* %s specifier */
+    _printf("String: %s\n", str);
+
+    /* %c specifier */
+    _printf("Character: %c\n", ch);
+
+    /* %% specifier */
+    _printf("Percent sign: %%\n");
 
     return (0);
 }
+
 
 ```
 
@@ -48,6 +60,6 @@ int main(void)
 
 > # Contributors
 
-## 1. Dennis Miring'u
+## 1.[ Dennis Miring'u](https://github.com/Dennis1287)
 
-## 2. Samuel Wanyonyi
+## 2. [Samuel Wanyonyi](https://github.com/Gideon-Yebei)

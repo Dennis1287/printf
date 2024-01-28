@@ -2,21 +2,22 @@
 
 /**
  * print_str - Print a string.
- * @args: A va_list containing the arguments.
+ * @args: The va_list containing the string to be printed.
  *
- * Return: The number of characters printed.
+ * Return: The number of characters printed for 's'.
  */
 int print_str(va_list args)
 {
 	char *str = va_arg(args, char *);
-	unsigned int i, charBytes = 0;
+	int charBytes = 0;
 
 	if (str == NULL)
 		str = "(null)";
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (*str != '\0')
 	{
-		_putchar(str[i]);
+		_putchar(*str);
+		str++;
 		charBytes++;
 	}
 
