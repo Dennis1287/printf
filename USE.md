@@ -15,3 +15,15 @@
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -Wno-format -std=gnu89 *.c
 ```
+
+## script for Betty tests on all c files and header files
+
+```bash
+ ./betty_check.sh
+```
+
+## script for compiling c files in the test directory
+
+```bash
+./test.sh
+```
