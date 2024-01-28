@@ -4,22 +4,16 @@
  * print_str - Print a string.
  * @args: The va_list containing the string to be printed.
  *
- * Return: The number of characters printed for 's'.
+ * Return: The number of characters printed for 's'
+ * excluding new line character.
  */
 int print_str(va_list args)
 {
 	char *str = va_arg(args, char *);
-	int charBytes = 0;
 
-	if (str == NULL)
-		str = "(null)";
-
-	while (*str != '\0')
+	if (str != NULL)
 	{
-		_putchar(*str);
-		str++;
-		charBytes++;
+		return (write(1, str, strlen(str)));
 	}
-
-	return (charBytes);
+	return (0);
 }

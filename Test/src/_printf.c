@@ -14,23 +14,22 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i;
-	unsigned int charBytes = 0;
+	int charBytes = 0;
 	va_list args;
 
 	va_start(args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	while (*format != '\0')
 	{
-		if (format[i] != '%')
+		if (*format != '%')
 		{
-			_putchar(format[i]);
+			write(1, format, 1);
 			charBytes++;
 		}
 		else
 		{
-			i++; /* Move to the character after '%' */
-			switch (format[i])
+			format++; /* Move to the character after '%' */
+			switch (*format)
 			{
 			case 'c':
 				charBytes += print_char(args);
@@ -42,12 +41,14 @@ int _printf(const char *format, ...)
 				charBytes += print_percent();
 				break;
 			default:
-				_putchar('%');
-				_putchar(format[i]);
+				write(1, "%", 1);
+				write(1, format, 1);
 				charBytes += 2;
 				break;
 			}
 		}
+
+		format++;
 	}
 
 	va_end(args);
