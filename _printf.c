@@ -19,36 +19,26 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			/* Copy non-% characters to buffer */
 			buffer[buff_ind++] = format[i];
-
-			/* Check if buffer is full, and print if needed */
 			if (buff_ind == BUFF_SIZE)
 				print_buffer(buffer, &buff_ind);
-
 			printed_chars++;
 		}
 		else
 		{
-			/* Print buffered characters before processing %*/
 			print_buffer(buffer, &buff_ind);
-			/* Extract format specifiers and arguments*/
 			flags = get_flags(format, &i);
 			width = get_width(format, &i, list);
 			precision = get_precision(format, &i, list);
 			size = get_size(format, &i);
-			/* Move past the % character in format*/
 			++i;
-			/* Handle the specific format and update printed_chars*/
 			printed = handle_print(format, &i, list, buffer,
 			 flags, width, precision, size);
-			/* Check for error in handling*/
 			if (printed == -1)
 				return (-1);
 			printed_chars += printed;
 		}
 	}
-	/* Print any remaining characters in the buffer*/
 	print_buffer(buffer, &buff_ind);
 	va_end(list);
 	return (printed_chars);
