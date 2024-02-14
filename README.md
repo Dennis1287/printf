@@ -1,4 +1,7 @@
 <h2 align=center>Dennis Miring'u | Samuel Wanyonyi</h2>
+
+> ## By:- [ Dennis Miring'u](https://github.com/Dennis1287) | [Gideon-Yebei](https://github.com/Gideon-Yebei)
+
 <h2 align=center>ALX Printf Group Project</h2>
 
 ---
